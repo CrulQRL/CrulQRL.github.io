@@ -73,26 +73,32 @@
 		<div class="main">
     		<div class="lamp">
     			<h2>Lamp</h2>
-	      			<button id="setLamp" class="on">Turn-On/Turn-Off Lamp</button>
+	      			<button id="setLamp" class="on" onclick="open_switchLamp_page()">Turn-On/Turn-Off Lamp</button>
 	      			<br><br>
   			</div>
   			<br>
   			<br>
   			<div class="auto">
   				<h2>Auto</h2>
-	      			<button id="setAuto" class="off">Turn-On/Turn-Off Auto</button>
+	      			<button id="setAuto" class="off" onclick="open_switchAuto_page()">Turn-On/Turn-Off Auto</button>
 	      			<br><br>
   			</div>
   		</div> 	
 
   		<script type="text/javascript">
-		    document.getElementById("setLamp").onclick = function () {
-		        location.href = "http://18.216.201.87/sysprog/switch_lamp";
-		    };
 
-		    document.getElementById("setAuto").onclick = function () {
-		        location.href = "http://18.216.201.87/sysprog/switch_mode";
-		    };
+  		function open_switchLamp_page() {
+		    var wnd = window.open("http://18.216.201.87/sysprog/switch_lamp");
+		    wnd.close();
+		    alert("Status Lamp is Changed !");
+		};
+
+		function open_switchAuto_page() {
+		    var wnd = window.open("http://18.216.201.87/sysprog/switch_mode");
+		    wnd.close();
+		    alert("Status Automatic Lamp is Changed !");
+		};
+
 		</script>
 
 	</body>
