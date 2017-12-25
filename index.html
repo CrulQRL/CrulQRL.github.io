@@ -1,1 +1,92 @@
-Hello World
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Website Controlled Lamp</title>
+		<style>
+			*{margin: 0px; padding: 0px}
+
+			body{
+			  background:#2c3e50;
+			  font-family: 'Arial';
+			}
+
+			h1,p,h2,button{
+			  color:#fff;
+			  text-align: center;
+			  padding: 10px;
+			}
+
+			.main{
+			  width: 100%;
+			  text-align: center;
+			}
+
+			.on, .off {
+			  color:#fff;
+			  text-align: center;
+			  cursor: pointer;
+			  font-size:24px;
+			}
+
+			.on {
+			  padding:20px 60px;
+			  outline: none;
+			  background-color: #27ae60;
+			  border: none;
+			  border-radius:5px;
+			}
+
+			.on:hover{
+			  background-color: #82e3aa;
+			}
+
+			.on:active {
+			  background-color: #82e3aa;
+			  transform: translateY(4px);
+			}
+
+			.off {
+			  padding:20px 60px;
+			  outline: none;
+			  background-color: #d35400;
+			  border: none;
+			  border-radius:5px;
+			}
+
+			.off:hover{
+			  background-color: #ffa366;
+			}
+
+			.off:active {
+			  background-color: #ffa366;
+			  transform: translateY(4px);
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Control your Lamp!</h1>
+		<p>Created by : Sysprog_Ceria</p>
+		<br>
+
+		<div class="main">
+    		<div class="lamp">
+    			<h2>Lamp</h2>
+    			<form action="control.php" method="post">
+	      			<input type="Submit" class="on" name="LampOn" value="Turn-On Lamp">
+	      			<br><br>
+	  				<input type="Submit" class="off" name="LampOff" value="Turn-Off Lamp">
+  				</form>
+  			</div>
+  			<br>
+  			<br>
+  			<div class="auto">
+  				<h2>Auto</h2>
+  				<form action="control.php" method="post">
+	      			<input type="Submit" class="on" name="AutoOn" value="Turn-On Auto">
+	      			<br><br>
+	  				<input type="Submit" class="off" name="AutoOff" value="Turn-Off Auto">
+  				</form>
+  			</div>
+  		</div> 		
+	</body>
+</html> 
