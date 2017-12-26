@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+
 <html>
 	<head>
+
 		<title>Website Controlled Lamp</title>
 		<style>
 			*{margin: 0px; padding: 0px}
@@ -89,15 +91,28 @@
 
   		function open_switchLamp_page() {
 		    var wnd = window.open("http://18.216.201.87/sysprog/switch_lamp");
-		    wnd.close();
-		    alert("Status Lamp is Changed !");
-		};
+		    wnd.addEventListener('load', 
+		    	setTimeout(function () { 
+		    		alert('Status Lamp is Changed !');
+		    		wnd.close();
+		    	}, 1000) , 
+		    	true); 
+		    // wnd.close();
+		    // wnd.onload = function () { alert("It's loaded!") }
+		    // alert("Status Lamp is Changed !");
+		}
 
 		function open_switchAuto_page() {
 		    var wnd = window.open("http://18.216.201.87/sysprog/switch_mode");
-		    wnd.close();
-		    alert("Status Automatic Lamp is Changed !");
-		};
+		    wnd.addEventListener('load', 
+		    	setTimeout(function () { 
+		    		alert("Status Automatic Lamp is Changed !");
+		    		wnd.close();
+		    	}, 1000) , 
+		    	true); 
+		    // wnd.close();
+		    // alert("Status Automatic Lamp is Changed !");
+		}
 
 		</script>
 
