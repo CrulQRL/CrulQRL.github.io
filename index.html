@@ -94,9 +94,23 @@
 		    wnd.addEventListener('load', 
 		    	setTimeout(function () { 
 		    		alert('Status Lamp is Changed !');
-		    		wnd.close();
+		    		setTimeout(function(){
+		    			wnd.close();
+		    		},1000);
 		    	}, 1000) , 
-		    	true); 
+		    	true);
+		  
+		    // wnd.addEventListener('load', function(){
+		    // 	setTimeout(function () { 
+		    // 		alert('Status Lamp is Changed !');
+		    // 		wnd.close();
+		    // 	}, 1000);
+		    // }, true);
+
+		    // wnd.onload = function(){
+		    // 	alert('Status Lamp is Changed !');
+		    // }
+
 		    // wnd.close();
 		    // wnd.onload = function () { alert("It's loaded!") }
 		    // alert("Status Lamp is Changed !");
@@ -107,7 +121,9 @@
 		    wnd.addEventListener('load', 
 		    	setTimeout(function () { 
 		    		alert("Status Automatic Lamp is Changed !");
-		    		wnd.close();
+		    		setTimeout(function(){
+		    			wnd.close();
+		    		},1000);
 		    	}, 1000) , 
 		    	true); 
 		    // wnd.close();
